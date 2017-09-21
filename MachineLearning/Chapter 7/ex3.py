@@ -41,7 +41,7 @@ for p in test_1[:-2]:
     P[1] *= Pp[p][1]
 for i in range(2):
     P[i] *= norm.pdf(test_1[-2], loc=density_mean[i], scale=density_var[i])
-    P[i] *= norm.pdf(test_1[-1], loc=density_mean[i], scale=density_var[i])
+    P[i] *= norm.pdf(test_1[-1], loc=sugar_ratio_mean[i], scale=sugar_ratio_var[i])
 print(P)
 if P[0] < P[1]:
     print(1, "Good")
